@@ -1,0 +1,134 @@
+<main>
+    <div class="container">
+        <form id="post-form">
+          <fieldset>
+            <legend>Personal Information</legend>
+           
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" value="<%= data.firstName %>">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" value="<%= data.lastName %>">
+              </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="licenseNumber">License Number</label>
+              <input type="text" class="form-control" id="licenseNumber" value="<%= data.licenseNumber%>">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="age">Age</label>
+              <input type="number" class="form-control" id="age" value="<%= data.age%>">
+            </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="dob">Date of Birth</label>
+              <input type="date" class="form-control" id="dob" value="<%= data.dateOfBirth%>">
+            </div>
+            </div>
+         
+          </fieldset>
+          
+          <fieldset>
+            <legend>Car Details</legend>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="carMake">Car Make</label>
+              <input type="text" class="form-control" id="carMake" value="<%= data.car_details.make %>">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="carModel">Car Model</label>
+              <input type="text" class="form-control" id="carModel" value="<%= data.car_details.model %>">
+            </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="carYear">Car Year</label>
+              <input type="number" class="form-control" id="carYear" value="<%= new Date(data.car_details.year).getFullYear() %>">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="plateNumber">Plate Number</label>
+              <input type="text" class="form-control" id="plateNumber" value="<%= data.car_details.plateNumber %>">
+            </div>
+            </div>
+          </fieldset>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      
+      <div class="m-4 rounded-2 border">
+        <div class="row p-3">
+          <div class="col-8 px-5 py-4" style="margin-left: 200px;">
+            
+            <div
+              id="userAlert"
+              style="display: none"
+              class="alert alert-success alert-dismissible fade show"
+              role="alert"
+            >
+              <strong></strong>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="container">
+              <h1>Book an Appointment!</h1>
+              <div
+                id="bookAlert"
+                style="display: none"
+                class="alert alert-danger alert-dismissible fade show my-3"
+                role="alert"
+              >
+                <span> Create New User!</span>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="form-group">
+                <label for="dateBook">Select Date:</label>
+                <div class="row my-3">
+                  <input type="date" class="form-control my-3" id="dateBook" />
+                  <label for="bookSelect">Select appointment time:</label>
+                  <select
+                    id="bookSelect"
+                    class="form-select my-3"
+                    aria-label="Default select example"
+                  ></select>
+                  <button type="button" class="btn btn-primary" id="bookG2Btn" style="margin-left: 20px;">
+                    Book
+                  </button>
+                </div>
+              </div>
+              <div id="timeSlots"></div>
+            </div>
+            <!-- Result Section -->
+            <div class="container" >
+              <button type="button" class="btn btn-primary" id="getResult_G" onclick="showResultG2()">Result</button>
+              
+                <fieldset id="Result-display-G2" style="display: none;">
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="getcarMake">Result</label>
+                  <input type="text" class="form-control" id="result-id-G2"  disabled>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="getcarModel">Feedback</label>
+                  <input type="text" class="form-control" id="feedback-id-G2"disabled >
+                </div>
+                </div>
+              </fieldset>
+               <div id="noResult-G2" style="display: none;">no Result found</div>
+                </div>
+            </div>
+</main>

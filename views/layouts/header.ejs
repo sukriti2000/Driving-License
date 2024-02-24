@@ -1,0 +1,43 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand mb-0 h1" href="/dashboard">Book Driving Test</a>
+    <div>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+            <!-- for driver -->
+            <li class="nav-item">
+              <a class="nav-link" id="Glink"  href="/G" >G Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="G2-link" href="/G2" >G2 Page</a>
+            </li>
+
+            <!-- for admin -->
+            <li class="nav-item">
+              <a class="nav-link" id="appointment-link" href="/appointment">Appointment</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" id="Examiner-link" href="/examiner">Examiner</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="Login-Link" href="/Login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="logout-link"  onclick="deleteAllCookies()" style="cursor: pointer;">Logout</a>
+            </li>
+
+          </ul>
+    </div>
+</nav>
+
+<style>
+    .nav-link {
+        color: azure !important; 
+    }
+  
+    .nav-link:hover {
+        color: rgb(102, 147, 38);
+    }
+</style>

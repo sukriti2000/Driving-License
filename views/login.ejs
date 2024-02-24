@@ -1,0 +1,129 @@
+<main>
+    <span id="Log-in-heading"><h1>LOG-IN</h1></span>
+<div class="container" style="margin-top: 150px" >
+    <div class="row">
+      <div class="col-lg-6"> 
+        <form id="signupForm" style="display: none;">
+          <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+              <div class="form-group">
+                <label for="userName">UserName</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userName"
+                  name="userName"
+                  aria-describedby="userName"
+                  placeholder="UserName"
+                />
+                <small id="userNameError" class="form-text error"></small>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  aria-describedby="password"
+                  placeholder="password"
+                />
+                <small id="passwordError" class="form-text error"></small>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+              <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  class="form-control"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  aria-describedby="confirmPassword"
+                  placeholder="Confirm Password"
+                />
+                <small
+                  id="confirmPasswordError"
+                  class="form-text error"
+                ></small>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+              <div class="form-group">
+                <label for="userType">User Type</label>
+                <select class="form-select" name="userType" id="userType">
+                  <option selected>Select</option>
+                  <option value="Driver">Driver</option>
+                  <option value="Examiner">Examiner</option>
+                  <option value="Admin">Admin</option>
+                </select>
+                <small id="userTypeError" class="form-text error"></small>
+              </div>
+            </div>
+          </div>
+          <div class="center mt-3 mb-3">
+            <input onclick="SignUp()" class="btn btn-primary" value="Submit" style="margin-left: 300px;"/>
+          </div>
+
+          <!-- change page -->
+          <h3 id="hide-signup">Login</h3>
+        </form>
+      </div>
+      <div class="col-lg-6" id="hide-login">
+        <form id="loginForm">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="form-group">
+                <label for="loginUserName">UserName</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="loginUserName"
+                  name="userName"
+                  aria-describedby="loginUserName"
+                  placeholder="UserName"
+                />
+                <small
+                  id="loginUserNameError"
+                  class="form-text error"
+                ></small>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-lg-8">
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="checkPassword"
+                  name="password"
+                  aria-describedby="password"
+                  placeholder="password"
+                />
+                <small id="checkPasswordError" class="form-text error"></small>
+              </div>
+            </div>
+          </div>
+          <div class="center mt-3 mb-3">
+            <input onclick="LoginUser()" class="btn btn-primary" value="Submit" style="margin-left: 150px;" />
+          </div>
+          <h3 id="hide-signin">Sign-up</h3>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>

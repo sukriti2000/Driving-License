@@ -1,0 +1,75 @@
+<main>
+    
+      <div class="row p-3">
+        <div class="col-8 px-5 py-4">
+          
+          <div class="container mt-2" style="margin-left: 350px;">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="appointmentDate" class="form-label"
+                    ><b>Select Date:</b></label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="appointmentDate"
+                    placeholder="Select date"
+                  />
+                </div>
+              </div>
+            </div>
+            <h5 class="mb-4">Available Slots</h5>
+            <div class="row">
+              <div class="col-md-12">
+                <div id="slotsContainer" style="margin-bottom: 30px;">
+                   <!-- slots will be added here -->
+                </div>
+              </div>
+              <div class="btn-group" role="group">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  id="cancelBtn" style="margin-right: 30px;background-color: #2c343b;"
+                >
+                  Cancel
+                </button>
+                <br>
+                <button type="button" class="btn btn-primary" id="bookBtn" style="background-color:#1e7e34;border-color: black;">
+                  Book
+                </button>
+              </div>
+              <div
+                id="AppointmentAlert"
+                style="display: none"
+                class="alert alert-danger alert-dismissible fade show my-3"
+                role="alert"
+              >
+                <span> Create New User!</span>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div id="Candidate Results" style="border: 1px black; height: auto; width: auto;">
+          <fieldset>
+            <div class="form-row">
+              <label for="Result">User Type</label>
+              <select class="form-select" name="display-result" id="display-result">
+                <option selected>Select</option>
+                <option value="true">Pass</option>
+                <option value="false">Fail</option>
+              </select>
+          </fieldset>
+          <button type="button" class="btn btn-primary" id="getResults" onclick="DisplayResults(event)" >Display Result</button>
+            <ul  id="Candidate-Results"></ul>
+        </div>
+      
+    </div>
+  </main>
